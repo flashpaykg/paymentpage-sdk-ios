@@ -135,7 +135,7 @@ class ViewController: UIViewController {
     
     //MARK: - Additionals
     func setDarkTheme() {
-        let theme = ECPTheme.getDarkTheme()
+        let theme = EPTheme.getDarkTheme()
         // Additional changes if needed
 //        theme.backgroundColor = UIColor.green
 //        theme.showDarkKeyboard = true

@@ -34,7 +34,7 @@
     // Sign payment info
     [paymentInfo setSignature:signature];
     
-    [self.flashpaySDK presentPaymentAt:self paymentInfo:paymentInfo completionHandler:^(ECPPaymentResult *result) {
+    [self.flashpaySDK presentPaymentAt:self paymentInfo:paymentInfo completionHandler:^(EPPaymentResult *result) {
         NSLog(@"flashpaySDK finished with status %ld", (long)result.status);
         if(result.error != NULL) { // if error occurred
             NSLog(@"Error: %@", result.error.localizedDescription);
@@ -141,7 +141,7 @@
 #pragma mark - Theme
 
 - (void)setDarkTheme {
-    ECPTheme *theme = [ECPTheme getDarkTheme];
+    EPTheme *theme = [EPTheme getDarkTheme];
     // Additional changes if needed
 //    theme.backgroundColor = UIColor.greenColor;
 //    theme.showDarkKeyboard = true;
